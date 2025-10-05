@@ -1,10 +1,11 @@
-import { signIn, signOut } from "auth"
+import { signIn, signOut } from "@/auth"
 import { Button } from "./ui/button"
+import { ComponentPropsWithRef } from "react"
 
 export function SignIn({
   provider,
   ...props
-}: { provider?: string } & React.ComponentPropsWithRef<typeof Button>) {
+}: { provider?: string } & ComponentPropsWithRef<typeof Button>) {
   return (
     <form
       action={async () => {
@@ -17,7 +18,7 @@ export function SignIn({
   )
 }
 
-export function SignOut(props: React.ComponentPropsWithRef<typeof Button>) {
+export function SignOut(props: ComponentPropsWithRef<typeof Button>) {
   return (
     <form
       action={async () => {
